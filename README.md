@@ -76,11 +76,12 @@ def update_my_comp(input_text):
 1. [Richard] Demo slides
 2. [Richard] Demo recording
 3. [Richard, Danielle] Nirav and Danielle up and running
-4. [Nirav] Airtable form iframe inserted
+4. DONE: [Nirav] Airtable form iframe inserted
 5. [Joe] Product symbols from Airtable
 6. Extra info on hover, product names
 7. Full product IMAGES from Airtable
 8. [Zac] All the Navis locations in the Airtable
    1. Lookup addresses to get lat/long
-9. Higher resolution map
+9. Higher resolution map/Larger map
 10. Filtering by product used
+11. Real-time updates of the data
