@@ -15,16 +15,16 @@ df = pd.DataFrame(
         "cnt": ["purple", "purple", "red", "red"],
     }
 )
-fig = go.Figure(
-    data=go.Scattergeo(
-        lon=df["long"],
-        lat=df["lat"],
-        text=df["text"],
-        mode="markers",
-        marker_color=df["cnt"],
-        marker_size=10,
+
+def get_figure():
+    fig = go.Figure(
+        data=go.Scattergeo(
+            lon=df["long"],
+            lat=df["lat"],
+            text=df["text"],
+            mode="markers",
+            marker_color=df["cnt"],
+            marker_size=10,
+        )
     )
-)
-fig.show()  # or any Plotly Express function e.g. px.bar(...)
-# fig.add_trace( ... )
-# fig.update_layout( ... )
+    return fig
