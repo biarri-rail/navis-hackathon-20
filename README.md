@@ -10,21 +10,22 @@ Global dependencies
   ```
   pyenv install 3.7.4
   ```
-- `poetry` https://github.com/python-poetry/poetry
-  ```
-  pip install
-  ```
 
 In the repo
 
-- Tell pyenv to use 3.7
+- Tell pyenv to use 3.7.4
   ```
-  pyenv local 3.7.3
+  pyenv local 3.7.4
+  ```
+- `poetry` https://github.com/python-poetry/poetry
+  ```
+  pip install
   ```
 - Install the python dependencies
   ```
   poetry install
   ``
+  ```
 - Create a `.env` file in the top-level directory
   ```
   AIRTABLE_API_KEY=< insert the key here>
@@ -45,6 +46,7 @@ poetry shell
 ```
 
 Running the tests. They are minimal and mainly just to help development
+
 ```
 poetry run pytest
 ```
