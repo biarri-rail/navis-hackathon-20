@@ -15,7 +15,7 @@ def get_figure():
     df = customers.merge(products, left_on="product", right_on="id", how="left")[
         ["long", "lat", "customer_name", "symbol"]
     ]
-    print(df)
+
     fig = go.Figure(
         data=go.Scattergeo(
             lon=df["long"],
@@ -25,4 +25,5 @@ def get_figure():
             mode="text",
         )
     )
+
     return fig
