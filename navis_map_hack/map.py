@@ -24,4 +24,5 @@ def get_figure():
             mode="text",
         )
     )
+
     return fig
