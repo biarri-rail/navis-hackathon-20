@@ -2,11 +2,10 @@
 
 # Navis on the Map: Better Together
 
-
-
 ## First time setup
 
 Global dependencies
+
 - python 3.7, possibly with pyenv https://github.com/pyenv/pyenv
   ```
   pyenv install 3.7.4
@@ -17,6 +16,7 @@ Global dependencies
   ```
 
 In the repo
+
 - Tell pyenv to use 3.7
   ```
   pyenv local 3.7.3
@@ -24,21 +24,27 @@ In the repo
 - Install the python dependencies
   ```
   poetry install
-  ````
+  ``
+- Create a `.env` file in the top-level directory
+  ```
+  AIRTABLE_API_KEY=< insert the key here>
+  ```
 
 ## Running it/working with
 
 1. Running the application
-    ```
-    poetry run app
-    ```
+   ```
+   poetry run app
+   ```
 2. Open up the app at http://127.0.0.1:8050/
 
-
 Getting into the virtualenv setup by peotry
+
 ```
 poetry shell
 ```
+
+Running the tests poetry run pytest
 
 ## Dash 101
 
@@ -58,3 +64,12 @@ Interactivity is controlled by adding a function which accepts an input componen
 def update_my_comp(input_text):
     return "You have told us {}.".format(input_text)
 ```
+
+## TODO
+
+1. Different colours for different products
+2. Product icons from Airtable
+3. Icon per product used
+4. Airtable form iframe inserted
+5. All the Navis locations in the Airtable
+   1. Lookup addresses to get lat/long
