@@ -10,7 +10,7 @@ Global dependencies
   ```
   pyenv install 3.7.4
   ```
-  
+
   and follow the Installation steps 2 & 3 at the link above.
 
 In the repo
@@ -73,9 +73,14 @@ def update_my_comp(input_text):
 
 ## TODO
 
-1. Different colours for different products
-2. Product icons from Airtable
-3. Icon per product used
-4. Airtable form iframe inserted
-5. All the Navis locations in the Airtable
+1. [Richard] Demo slides
+2. [Richard] Demo recording
+3. [Richard, Danielle] Nirav and Danielle up and running
+4. [Nirav] Airtable form iframe inserted
+5. [Joe] Product symbols from Airtable
+6. Extra info on hover, product names
+7. Full product IMAGES from Airtable
+8. [Zac] All the Navis locations in the Airtable
    1. Lookup addresses to get lat/long
+9. Higher resolution map
+10. Filtering by product used
