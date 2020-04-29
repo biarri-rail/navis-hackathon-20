@@ -1,0 +1,8 @@
+README.md
+setup.py
+navis_map_hack/__init__.py
+navis_map_hack.egg-info/PKG-INFO
+navis_map_hack.egg-info/SOURCES.txt
+navis_map_hack.egg-info/dependency_links.txt
+navis_map_hack.egg-info/requires.txt
+navis_map_hack.egg-info/top_level.txt
