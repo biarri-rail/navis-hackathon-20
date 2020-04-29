@@ -30,8 +30,8 @@ def process_airtable_record(record):
 
     return {
         "products": record["fields"]["Product"],
-        "lat": record["fields"]["Latitude"],
-        "long": record["fields"]["Longitude"],
+        "lat": lat,
+        "long": lng,
         "customer_name": record["fields"]["Customer Name"],
     }
 
