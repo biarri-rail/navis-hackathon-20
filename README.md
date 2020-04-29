@@ -79,7 +79,7 @@ def update_my_comp(input_text):
 3. DONE: [Richard, Danielle] Nirav and Danielle up and running
 4. DONE: [Nirav] Airtable form iframe inserted
 5. DONE: [Joe] Product symbols from Airtable
-6. [Zac] Higher resolution map/Larger map
+6. DONE: [Zac] Higher resolution map/Larger map
 7. Filtering by product used
 8. Full product IMAGES from Airtable
 9. Extra info on hover, product names
