@@ -2,6 +2,44 @@
 
 # Navis on the Map: Better Together
 
+
+
+## First time setup
+
+Global dependencies
+- python 3.7, possibly with pyenv https://github.com/pyenv/pyenv
+  ```
+  pyenv install 3.7.4
+  ```
+- `poetry` https://github.com/python-poetry/poetry
+  ```
+  pip install
+  ```
+
+In the repo
+- Tell pyenv to use 3.7
+  ```
+  pyenv local 3.7.3
+  ```
+- Install the python dependencies
+  ```
+  poetry install
+  ````
+
+## Running it/working with
+
+1. Running the application
+    ```
+    poetry run app
+    ```
+2. Open up the app at http://127.0.0.1:8050/
+
+
+Getting into the virtualenv setup by peotry
+```
+poetry shell
+```
+
 ## Dash 101
 
 In `app.py`, the `app` is built up by adding components to the layout. `app.run_server()` is called to start the Dash server.
