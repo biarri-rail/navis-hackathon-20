@@ -32,7 +32,7 @@ In the repo
     ```
     poetry run app
     ```
-2. Open up the app at http://127.0.0.1:8050/ , weirdly it also opens a browser tab on another port
+2. Open up the app at http://127.0.0.1:8050/
 
 
 Getting into the virtualenv setup by peotry
