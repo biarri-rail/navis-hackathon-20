@@ -10,6 +10,8 @@ Global dependencies
   ```
   pyenv install 3.7.4
   ```
+  
+  and follow the Installation steps 2 & 3 at the link above.
 
 In the repo
 
