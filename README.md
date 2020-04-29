@@ -44,7 +44,10 @@ Getting into the virtualenv setup by peotry
 poetry shell
 ```
 
-Running the tests poetry run pytest
+Running the tests. They are minimal and mainly just to help development
+```
+poetry run pytest
+```
 
 ## Dash 101
 

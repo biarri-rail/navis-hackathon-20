@@ -1,29 +1,16 @@
 import plotly.graph_objects as go  # or plotly.express as px
-
+from .data import get_data
 import pandas as pd
 
-df = pd.DataFrame(
-    {
-        "lat": [19.734671, 30.673855, 39.099724, -41.429825],
-        "long": [-72.198525, -81.463496, -94.578331, 147.157135],
-        "text": [
-            "Cap Terminal",
-            "Worldwide Terminals Fernandina",
-            "Kansas City Southern",
-            "TasRail",
-        ],
-        "cnt": ["purple", "purple", "red", "red"],
-    }
-)
 
 def get_figure():
+    df = get_data()
     fig = go.Figure(
         data=go.Scattergeo(
             lon=df["long"],
             lat=df["lat"],
-            text=df["text"],
+            text=df["customer_name"],
             mode="markers",
-            marker_color=df["cnt"],
             marker_size=10,
         )
     )
