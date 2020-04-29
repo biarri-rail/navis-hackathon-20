@@ -24,7 +24,6 @@ In the repo
 - Install the python dependencies
   ```
   poetry install
-  ``
   ```
 - Create a `.env` file in the top-level directory
   ```
