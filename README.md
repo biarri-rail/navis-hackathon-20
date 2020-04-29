@@ -7,19 +7,19 @@
 ## First time setup
 
 Global dependencies
-- `poetry` https://github.com/python-poetry/poetry
-  ```
-  curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-  ```
 - python 3.7, possibly with pyenv https://github.com/pyenv/pyenv
   ```
-  pyenv install 3.7.3
+  pyenv install 3.7.8
+  ```
+- `poetry` https://github.com/python-poetry/poetry
+  ```
+  pip install
   ```
 
 In the repo
 - Tell pyenv to use 3.7
   ```
-  echo '3.7.3' > .python-version
+  pyenv local 3.7.3
   ```
 - Install the python dependencies
   ```
