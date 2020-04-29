@@ -9,7 +9,7 @@
 Global dependencies
 - python 3.7, possibly with pyenv https://github.com/pyenv/pyenv
   ```
-  pyenv install 3.7.8
+  pyenv install 3.7.4
   ```
 - `poetry` https://github.com/python-poetry/poetry
   ```
