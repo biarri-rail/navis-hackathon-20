@@ -7,6 +7,7 @@
 Global dependencies
 
 - python 3.7, possibly with pyenv https://github.com/pyenv/pyenv
+
   ```
   pyenv install 3.7.4
   ```
@@ -77,7 +78,7 @@ def update_my_comp(input_text):
 2. [Richard] Demo recording
 3. [Richard, Danielle] Nirav and Danielle up and running
 4. DONE: [Nirav] Airtable form iframe inserted
-5. [Joe] Product symbols from Airtable
+5. ~~[Joe] Product symbols from Airtable~~ DONE
 6. Extra info on hover, product names
 7. Full product IMAGES from Airtable
 8. [Zac] All the Navis locations in the Airtable
