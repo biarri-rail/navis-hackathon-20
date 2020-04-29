@@ -4,12 +4,13 @@ import airtable
 import geocoder
 
 AIRTABLE_BASE_ID = "appQy6EXyIOwI0Top"
-AIRTABLE_TABLE_NAME = "customers"
+CUSTOMERS = "customers"
+PRODUCTS = "products"
 
 
-def get_airtable_api():
+def get_airtable_api(table_name):
     return airtable.Airtable(
-        AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME, api_key=os.getenv("AIRTABLE_API_KEY")
+        AIRTABLE_BASE_ID, table_name, api_key=os.getenv("AIRTABLE_API_KEY")
     )
 
 
@@ -18,31 +19,55 @@ def get_lat_long(address):
     return g.latlng
 
 
-def process_airtable_record(record):
+def process_customer_record(record):
     lat = None
     lng = None
 
-    if "Address" in record:
-        lat, lng = get_lat_long(record["Address"])
+    if "Address" in record["fields"]:
+        lat, lng = get_lat_long(record["fields"]["Address"])
     else:
         lat = record["fields"]["Latitude"]
         lng = record["fields"]["Longitude"]
 
     return {
-        "products": record["fields"]["Product"],
+        "id": record["id"],
+        "product": record["fields"]["Product"][0],
         "lat": lat,
         "long": lng,
         "customer_name": record["fields"]["Customer Name"],
     }
 
 
+def process_product_record(record):
+    return {
+        "id": record["id"],
+        "product": record["fields"]["Name"],
+        "customers": record["fields"].get("customers", []),
+        "symbol": record["fields"].get("Symbol", None),
+    }
+
+
 def get_data():
-    airtable_api = get_airtable_api()
-    data = airtable_api.get_all()
+    customers = get_airtable_api(CUSTOMERS).get_all()
+    products = get_airtable_api(PRODUCTS).get_all()
+    return {CUSTOMERS: customers, PRODUCTS: products}
+
+
+def get_customers(data):
     return pd.DataFrame(
         [
-            process_airtable_record(record)
-            for record in data
+            process_customer_record(record)
+            for record in data[CUSTOMERS]
+            if len(record["fields"].keys()) > 0
+        ]
+    )
+
+
+def get_products(data):
+    return pd.DataFrame(
+        [
+            process_product_record(record)
+            for record in data[PRODUCTS]
             if len(record["fields"].keys()) > 0
         ]
     )
