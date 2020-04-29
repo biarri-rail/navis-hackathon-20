@@ -22,8 +22,8 @@ def process_airtable_record(record):
     lat = None
     lng = None
 
-    if "Address" in record:
-        lat, lng = get_lat_long(record["Address"])
+    if "Address" in record['fields']:
+        lat, lng = get_lat_long(record['fields']["Address"])
     else:
         lat = record["fields"]["Latitude"]
         lng = record["fields"]["Longitude"]
