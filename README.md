@@ -19,7 +19,7 @@ In the repo
   ```
 - `poetry` https://github.com/python-poetry/poetry
   ```
-  pip install
+  pip install poetry
   ```
 - Install the python dependencies
   ```
